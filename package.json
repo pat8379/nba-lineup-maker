@@ -25,12 +25,10 @@
     "nodemon": "^2.0.16"
   },
   "scripts": {
-    "react-start": "react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "start": "node server.js",
-    "heroku-postbuild": "npm install && npm run react-start"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
