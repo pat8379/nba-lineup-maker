@@ -29,7 +29,9 @@ export default function LineUp() {
         if (!Object.values(playersToAdd).includes(null) && lineUpName !== undefined) {
             if (Object.values(playersToAdd).length === new Set(Object.values(playersToAdd)).size){
                 dispatch(addLineUp({
-                    playersInLineUp: Object.values(playersToAdd),
+                    playersInLineUp: Object.values(playersToAdd).map((p) => {
+                        return Number(p)
+                    }),
                     lineUpName: lineUpName,
                     lineUpId: totalLineUp
                 }))

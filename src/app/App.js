@@ -8,6 +8,7 @@ import './App.css';
 let firstTimeFetch = true
 
 function App() {
+  // const playersList = useSelector(selectPlayers)
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -29,6 +30,7 @@ function App() {
       firstTimeFetch = false
       return
     }
+    // console.log(playersList.length === undefined)
     fetchData()
   }, [dispatch])
   return (

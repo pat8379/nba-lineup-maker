@@ -7,7 +7,7 @@ export const lineUpSlice = createSlice({
             1: {
                 playersInLineUp: [1,2,3,4,5],
                 lineUpName: "First Line Up",
-                lineUpId: 1,
+                lineUpId: 1
             }
         }
     },
@@ -24,7 +24,7 @@ export const lineUpSlice = createSlice({
         },
         addPlayersToLineUp: (state,action) => {
             const {lineUpId, playersId, playerToReplace} = action.payload
-            const index = state.lineUp[lineUpId].playersInLineUp.indexOf(Number(playerToReplace))
+            const index = state.lineUp[lineUpId].playersInLineUp.indexOf(playerToReplace)
             state.lineUp[lineUpId].playersInLineUp[index] = playersId
         }
     }

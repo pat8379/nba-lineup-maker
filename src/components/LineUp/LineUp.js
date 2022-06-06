@@ -20,7 +20,7 @@ export default function EachLineUp({lDesc}) {
             <p>{eachLineUp.lineUpName}</p>
             <ul>
                 {eachLineUp.playersInLineUp.map((b) => (
-                    <li>{players[b].player} - {players[b].rating} - {players[b].position}</li>
+                    <li>{players[Number(b)].player} - {players[Number(b)].rating} - {players[Number(b)].position}</li>
 
                 ))}
             </ul>

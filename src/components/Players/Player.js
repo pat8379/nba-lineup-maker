@@ -20,8 +20,8 @@ export default function Player({pDesc}){
             if (!lineUps[lineUpValue].playersInLineUp.includes(player)){
                 dispatch(addPlayersToLineUp({
                     lineUpId: lineUpValue,
-                    playersId: pDesc,
-                    playerToReplace: playerToReplace
+                    playersId: Number(pDesc),
+                    playerToReplace: Number(playerToReplace)
                 }))
                 navigate("/lineup")
             } else {

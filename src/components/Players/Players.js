@@ -4,7 +4,7 @@ import Player from "./Player";
 import { addPlayers, selectPlayers} from "../../features/players/playersSlice";
 import './Players.css'
 
-const teamList = ['GSW','NUGGETS','BULLS','CELTICS','BUCKS','JAZZ','HEAT']
+// const teamList = ['GSW','NUGGETS','BULLS','CELTICS','BUCKS','JAZZ','HEAT']
 export default function Players() {
     const [playerName,setPlayerName] = useState()
     const [height,setHeight] = useState()
@@ -13,13 +13,12 @@ export default function Players() {
     const [team, setTeam] = useState()
 
     const [searchPlayer, setSearchPlayer] = useState()
-    const [searchTeam, setSearchTeam] = useState()
-    const [searchPosition, setSearchPosition] = useState()
 
     const playersList = useSelector(selectPlayers)
     // const fetchStatus = useSelector(selectStatus)
     const dispatch = useDispatch()
-
+    const teamList = [...new Set(Object.values(playersList).map((n) => n.team))]
+    
     // const handleFetchClick  = (e) => {
     //     e.preventDefault()
     //     fetch('http://localhost:4000/player')
@@ -64,8 +63,6 @@ export default function Players() {
                 <h3>Players</h3>
                 <div className="players-banner-search">
                     <input placeholder="Search Player" id="search-player" value={searchPlayer} onChange={(e) => setSearchPlayer(e.target.value)}/>
-                    <input placeholder="Search Team" id="search-team" value={searchTeam} onChange={(e) => setSearchTeam(e.target.value)}/>
-                    <input placeholder="Search Position" id="search-position" value={searchPosition} onChange={(e) => setSearchPosition(e.target.value)}/>
                 </div>
             </div>
             <div className="players-form">
@@ -78,9 +75,11 @@ export default function Players() {
                         <option value="default" disabled hidden>
                             Choose a Position
                         </option>
-                        <option key="Guard" value="Guard">Guard</option>
-                        <option key="Center" value="Center">Center</option>
-                        <option key="Forward" value="Forward">Forward</option>
+                        <option key="PG" value="PG">PG</option>
+                        <option key="SG" value="SG">SG</option>
+                        <option key="PF" value="PF">PF</option>
+                        <option key="SF" value="SF">SF</option>
+                        <option key="C" value="C">C</option>
                     </select>
                     <select required defaultValue="default" onChange={(e) => setTeam(e.target.value)}>
                         <option value="default" disabled hidden>
