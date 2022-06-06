@@ -1,0 +1,49 @@
+header,footer, nav {
+    /* background-color: black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: white;
+    /* background-color: red; */
+    margin: 0;
+    padding: 10px;
+}
+
+header {
+    margin-bottom: 20px;
+    background-color: black;
+}
+
+footer {
+    margin-top: 20px;
+    background-color: black;
+    flex-direction: column;
+    padding: 10px;
+}
+
+footer p {
+    color: white;
+    padding: 0px 10px;
+    margin: 2px 0px;
+}
+
+main {
+    min-height: 70vh;
+    padding: 0px 20px;
+}
+
+a {
+    text-decoration: underline;
+    color: #8585ff;
+    cursor: pointer;
+}
+
+.app-link {
+    color: red;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0px 5px;
+}

@@ -1,0 +1,28 @@
+.lineups-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+.lineups-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#lineups-formbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#search-lineup, #lineups-formbox > *{
+    margin: 5px;
+    padding: 5px;
+    /* border-radius: 5px; */
+    border: 1px solid black;
+    border-radius: 10px;
+}

@@ -1,0 +1,27 @@
+.player {
+    border: 1px solid black;
+    padding: 10px;
+    min-width: 280px;
+    width: fit-content;
+    margin: 0px 10px 10px 0px;
+    /* padding: 10px 10px 0px 10px; */
+}
+
+.player p {
+    margin: 10px 0px;
+    /* padding: 0; */
+}
+
+#add-to-lineup-form > *{
+    /* margin: 0px 5px; */
+    margin-right: 10px;
+    padding: 5px;
+    /* border-radius: 5px; */
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.player-form-replace {
+    min-width: 170px;
+}
