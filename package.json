@@ -25,8 +25,7 @@
     "nodemon": "^2.0.16"
   },
   "scripts": {
-    "heroku-postbuild": "react-scripts start",
-    "start": "node server.js react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
